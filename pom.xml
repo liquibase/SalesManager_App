@@ -19,6 +19,15 @@
 		<liquibase.propertyFile>local.liquibase.properties</liquibase.propertyFile>
 	</properties>
 
+	<profiles>
+		<profile>
+				 <id>QA</id>
+			   <properties>
+					  <liquibase.propertyFile>QA.liquibase.properties</liquibase.propertyFile>
+		  </properties>
+	 	</profile>
+	</profiles>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
