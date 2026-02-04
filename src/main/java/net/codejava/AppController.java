@@ -55,7 +55,7 @@ public class AppController {
 	    return "redirect:/";
 	}
 	
-	@RequestMapping("/delete/{id}")
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
 	public String delete(@PathVariable(name = "id") int id) {
 	    dao.delete(id);
 	    return "redirect:/";       

@@ -29,7 +29,9 @@
                 <td>
                     <a th:href="@{'/edit/' + ${sale.id}}">Edit</a>
                     &nbsp;&nbsp;&nbsp;
-                    <a th:href="@{'/delete/' + ${sale.id}}">Delete</a>
+                    <form th:action="@{'/delete/' + ${sale.id}}" method="post" style="display:inline">
+                        <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
                 </td>
             </tr>
         </tbody>
